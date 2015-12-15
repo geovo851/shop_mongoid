@@ -14,6 +14,7 @@ require "sprockets/railtie"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Mongoid.raise_not_found_error = false
 
 module ShopMongoid
   class Application < Rails::Application
@@ -28,5 +29,6 @@ module ShopMongoid
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
