@@ -45,11 +45,6 @@ orders.each do |o|
   o.destroy
 end
 
-# users = User.all
-# users.each do |u|
-#   u.destroy
-# end
-
 products = Product.all
 products.each do |p|
   p.destroy
